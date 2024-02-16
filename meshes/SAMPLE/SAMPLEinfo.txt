@@ -1,0 +1,57 @@
+Path
+foil_path = CD_airfoil2_1000_c1a8
+Constants
+chord = 1
+scale = 1.0
+
+Mesh set up
+dy_rel = 0.0002
+dy = 0.0002
+bl_exp = 0.02
+ogrid_ny = 80
+adding other expansion and number of layers to customise BL growth
+bl_exp_i = [0.06]
+ogrid_ny_i = [60]
+nk = 32
+ds_mesh_rel = 0.0025
+ds_mesh = 0.0025
+camb_n = 300
+stretch_outlet = False
+stretch_len_outlet = 0.75
+expand_ratio_outlet = 1.05
+stretch_inlet = False
+stretch_len_inlet = 0.5
+expand_ratio_inlet = 1.05
+stretch_top = 0.25
+expand_ratio_top = 1.05
+stretch_bottom = False
+stretch_len_bottom = 0.25
+expand_ratio_bottom = 1.05
+blks_in = -2
+blks_out = 2.5
+blks_top = 1.5
+blks_bottom = -1
+offset = 0
+SECOND/THIRD/FOURTH,ETC BACKGROUND BLOCKS
+ds_mesh_rel_i = []
+blks_in_i = []
+blks_out_i = []
+blks_bottom_i = []
+blks_top_i = []
+
+o-grid mesh info
+num points, 1st dy size: 1000, 0.000200
+min, max & max/min ds: 0.000094, 0.002722, 28.840090
+
+ni_ext outlet = 0
+ni_ext inlet = 0
+nj_ext top = 0
+nj_ext bottom = 0
+block 1
+1800	1000	1800000
+(1800, 1000)
+block 2
+1000	140	140000
+(1000, 140)
+2D mesh size: 1.94 M
+3D mesh size: 62.08 M

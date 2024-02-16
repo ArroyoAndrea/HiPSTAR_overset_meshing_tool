@@ -12,6 +12,15 @@ export PYTHONPATH="absolutePathToHipstar/hipstar/PLATUS3/meshing_tools/"
 ```
  - python 3.5 or newer versions
 
+
+# How to generate a mesh?
+
+ 1. Run 01-surface_distribution.py
+ 2. Run 02a-mesh\_prepare.py or 02b-mesh\_prepare\_fishtail.py, according to the type of mesh
+  - O-grid with one or multiple background blocks
+  - O-grid with near-wake refinemnent and background block
+
+
 # FILES
 
 ## 01-surface_distribution.py
@@ -108,6 +117,34 @@ OUTPUT FILE:
  - meshes/meshname/z_r_grid_x.dat
  - meshes/meshname/meshname_info.txt
  - meshes/meshname/mesh.png
+
+## 04-mesh_plot.py
+
+Visualization routine for the generated mesh.
+
+INPUT PARAMETERS: included in the command line when running the routine
+ - stp : step to mesh plot every stp lines
+ - meshname : name of the mesh (folder inside meshes directory, i.e. SAMPLE)
+ - monitorsfile : name of monitors file to be included (i.e. Monitors_sample.dat)
+
+EXAMPLE:
+```python
+python3 04-mesh_plot.py --meshname=SAMPLE --monitorsfile=Monitors\_sample.dat --stp=5
+```
+Shown SAMPLE mesh, with the corresponding monitor points. The mesh is displayed every 5 grid lines.
+
+# INPUT FILES STRUCTURE
+
+## geom/airfoilname.dat
+
+ - Two columns (x and y coordinates) separated by spaces.
+ - No header in the columns.
+ - Clockwise turn around the airfoil surface starting from the trailing edge
+
+## Monitors.dat
+
+ - Three columns (x, y, and z coordinates) separated by spaces
+ - Header in the columns: x y z
 
 # FOLDERS
 
