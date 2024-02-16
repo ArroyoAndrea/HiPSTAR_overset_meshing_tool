@@ -21,6 +21,9 @@ export PYTHONPATH="absolutePathToHipstar/hipstar/PLATUS3/meshing_tools/"
   - O-grid with near-wake refinemnent and background block
 
 
+<img src='./meshes/SAMPLE/mesh.png' width='470'> <img src='./meshes/SAMPLE_fishtail/mesh.png' width='500'> 
+
+
 # FILES
 
 ## 01-surface_distribution.py
